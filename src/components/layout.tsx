@@ -10,7 +10,7 @@ type TLayoutProps = {
 export const Layout = ({ children, videoSrc, videoRef }: TLayoutProps) => {
   return (
     <div className={styles.root}>
-      <video autoPlay ref={videoRef}>
+      <video ref={videoRef} playsInline>
         <source src={videoSrc} type="video/mp4" />
       </video>
       <div className={styles.content}>{children}</div>
