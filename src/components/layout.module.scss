@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 900px;
+  background-color: white;
+
+  video {
+    width: 100%;
+    height: calc(40vh - 10px);
+    object-fit: cover;
+  }
+
+  .content {
+    background: linear-gradient(180deg, #f6f6f6 0%, #fff 10%);
+    border-radius: 10px;
+    overflow: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: calc(60vh - 11px);
+  }
+}
