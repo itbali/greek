@@ -1,5 +1,5 @@
 import { Welcome } from './components/screens/welcome/welcome.tsx';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Button } from './ui-kit/button/button.tsx';
 import styles from './app.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
@@ -20,6 +20,13 @@ function App() {
       videoRef.current.muted = false;
     }
   };
+
+  useEffect(() => {
+    //hack to prevent pull to refresh
+    document.body.addEventListener('touchmove', (e) => e.preventDefault(), {
+      passive: false
+    });
+  }, []);
 
   if (currentPage === 'welcome') {
     return (

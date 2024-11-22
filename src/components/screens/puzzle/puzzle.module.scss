@@ -1,3 +1,5 @@
 .root {
-  overscroll-behavior: none;
+  :global(.jigsaw-puzzle) {
+    overflow: hidden;
+  }
 }
