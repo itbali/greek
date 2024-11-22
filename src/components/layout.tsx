@@ -9,9 +9,16 @@ type TLayoutProps = {
   videoSrc: string;
   videoRef: MutableRefObject<HTMLVideoElement | null>;
   withGoBackButton?: boolean;
+  className?: string;
 };
 
-export const Layout = ({ children, videoSrc, videoRef, withGoBackButton }: TLayoutProps) => {
+export const Layout = ({
+  children,
+  videoSrc,
+  videoRef,
+  withGoBackButton,
+  className
+}: TLayoutProps) => {
   const dispatch = useDispatch();
 
   const goBack = () => {
@@ -19,7 +26,7 @@ export const Layout = ({ children, videoSrc, videoRef, withGoBackButton }: TLayo
   };
 
   return (
-    <div className={styles.root}>
+    <div className={`${styles.root} ${className}`}>
       <video ref={videoRef} autoPlay playsInline src={videoSrc} />
       {withGoBackButton && (
         <Button className={styles.goBack} onClick={goBack}>
