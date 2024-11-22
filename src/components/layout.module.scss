@@ -19,7 +19,8 @@
   .content {
     background: linear-gradient(180deg, #f6f6f6 0%, #fff 10%);
     border-radius: 10px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     text-align: center;
     flex-direction: column;

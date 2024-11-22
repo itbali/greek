@@ -18,6 +18,7 @@
     "cpx": "^1.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-jigsaw-puzzle": "^1.0.5",
     "react-redux": "^9.1.2"
   },
   "devDependencies": {

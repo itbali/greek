@@ -6,7 +6,7 @@ type TPagesState = {
 };
 
 const initialState: TPagesState = {
-  currentPage: 'home'
+  currentPage: 'welcome'
 };
 
 const pagesSlice = createSlice({

@@ -1,10 +1,11 @@
-import { WelcomeScreen } from './components/screens/welcomeScreen/welcomeScreen.tsx';
+import { Welcome } from './components/screens/welcome/welcome.tsx';
 import { useRef } from 'react';
 import { Button } from './ui-kit/button/button.tsx';
 import styles from './app.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCurrentPage, setCurrentPage } from './store/store.ts';
 import { Mythology } from './components/screens/mythology/mythology.tsx';
+import Puzzle from './components/screens/puzzle/puzzle.tsx';
 
 function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -32,7 +33,11 @@ function App() {
     return <Mythology videoRef={videoRef} />;
   }
 
-  return <WelcomeScreen videoRef={videoRef} />;
+  if (currentPage === 'puzzle') {
+    return <Puzzle videoRef={videoRef} />;
+  }
+
+  return <Welcome videoRef={videoRef} />;
 }
 
 export default App;

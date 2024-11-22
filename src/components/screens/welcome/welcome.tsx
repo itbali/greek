@@ -3,9 +3,9 @@ import { Button } from '../../../ui-kit/button/button.tsx';
 import { TScreenProps } from '../TScreenProps.ts';
 import { useDispatch } from 'react-redux';
 import { setCurrentPage, TAvailablePages } from '../../../store/store.ts';
-import styles from './welcomeScreen.module.scss';
+import styles from './welcome.module.scss';
 
-export const WelcomeScreen = ({ videoRef }: TScreenProps) => {
+export const Welcome = ({ videoRef }: TScreenProps) => {
   const dispatch = useDispatch();
 
   const setPage = (page: TAvailablePages) => {
@@ -19,7 +19,7 @@ export const WelcomeScreen = ({ videoRef }: TScreenProps) => {
       <div className={styles.buttonsGreed}>
         <Button onClick={() => setPage('mythology')}>⚡️ Mythology</Button>
         <Button onClick={() => alert('Hello!')}>🎶 Music</Button>
-        <Button onClick={() => alert('Hello!')}>🧩 Puzzzzzle</Button>
+        <Button onClick={() => setPage('puzzle')}>🧩 Puzzzzzle</Button>
         <Button onClick={() => alert('Hello!')}>📚 Education</Button>
       </div>
     </Layout>
